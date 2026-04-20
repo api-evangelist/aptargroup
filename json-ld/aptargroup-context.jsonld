@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "schema": "https://schema.org/",
+    "aptar": "https://www.aptargroup.com/vocab#",
+    "productId": "schema:identifier",
+    "name": "schema:name",
+    "category": "schema:category",
+    "market": "schema:audience",
+    "description": "schema:description",
+    "material": "schema:material",
+    "sustainable": "aptar:sustainable",
+    "sku": "schema:sku",
+    "orderId": "schema:identifier",
+    "status": "aptar:status"
+  }
+}

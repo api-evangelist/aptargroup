@@ -1,0 +1,215 @@
+openapi: 3.0.3
+info:
+  title: AptarGroup Product Catalog API
+  description: >-
+    API for the AptarGroup product catalog of dispensing, sealing, and active
+    packaging solutions for the beauty, personal care, pharmaceutical, food, and
+    home care markets. Enables partners to browse and integrate product data.
+  version: 1.0.0
+  contact:
+    name: AptarGroup
+    url: https://www.aptargroup.com
+  license:
+    name: Proprietary
+servers:
+  - url: https://api.aptargroup.com/v1
+    description: AptarGroup Product Catalog API
+security:
+  - bearerAuth: []
+tags:
+  - name: Products
+    description: AptarGroup product catalog
+  - name: Orders
+    description: Sample and order management
+paths:
+  /products:
+    get:
+      operationId: listProducts
+      summary: AptarGroup - List Products
+      description: Returns a list of AptarGroup dispensing and packaging products
+      tags:
+        - Products
+      parameters:
+        - name: category
+          in: query
+          description: Filter by product category (dispensing, sealing, active-packaging)
+          schema:
+            type: string
+        - name: market
+          in: query
+          description: Filter by target market (beauty, pharma, food, home-care)
+          schema:
+            type: string
+        - name: sustainable
+          in: query
+          description: Filter to only sustainable products
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Product'
+              examples:
+                ListProductsExample:
+                  x-microcks-default: true
+                  summary: Example product list
+                  value:
+                    data:
+                      - productId: APTAR-PUMP-001
+                        name: EcoStar Airless Pump
+                        category: dispensing
+                        market: beauty
+                        sustainable: true
+        '401':
+          description: Unauthorized - invalid or missing authentication token
+  /products/{productId}:
+    get:
+      operationId: getProduct
+      summary: AptarGroup - Get Product
+      description: Returns details for a specific AptarGroup product
+      tags:
+        - Products
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          description: Unique product identifier
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Product details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+              examples:
+                GetProductExample:
+                  x-microcks-default: true
+                  summary: Example product detail
+                  value:
+                    productId: APTAR-PUMP-001
+                    name: EcoStar Airless Pump
+                    category: dispensing
+                    market: beauty
+                    description: Airless pump dispenser for skincare products
+                    material: recycled-plastic
+                    sustainable: true
+                    sku: ECO-PUMP-50ML
+        '404':
+          description: Product not found
+        '401':
+          description: Unauthorized - invalid or missing authentication token
+  /orders:
+    post:
+      operationId: createSampleRequest
+      summary: AptarGroup - Create Sample Request
+      description: Creates a sample request for AptarGroup packaging products
+      tags:
+        - Orders
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SampleRequest'
+            examples:
+              SampleRequestExample:
+                x-microcks-default: true
+                summary: Example sample request
+                value:
+                  productId: APTAR-PUMP-001
+                  quantity: 5
+                  contactEmail: designer@brand.com
+                  notes: Need samples for our new skincare line launch
+      responses:
+        '201':
+          description: Sample request created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+        '400':
+          description: Invalid request body
+        '401':
+          description: Unauthorized - invalid or missing authentication token
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Product:
+      title: Product
+      description: An AptarGroup dispensing or packaging product
+      type: object
+      properties:
+        productId:
+          type: string
+          description: Unique product identifier
+        name:
+          type: string
+          description: Product name
+        category:
+          type: string
+          description: Product category
+        market:
+          type: string
+          description: Target market
+        description:
+          type: string
+          description: Product description
+        material:
+          type: string
+          description: Primary material
+        sustainable:
+          type: boolean
+          description: Whether the product uses sustainable materials
+        sku:
+          type: string
+          description: Stock keeping unit identifier
+    SampleRequest:
+      title: SampleRequest
+      description: A request for product samples
+      type: object
+      properties:
+        productId:
+          type: string
+          description: Product to sample
+        quantity:
+          type: integer
+          description: Number of samples requested
+        contactEmail:
+          type: string
+          description: Contact email for the sample request
+        notes:
+          type: string
+          description: Additional notes about the sample request
+    Order:
+      title: Order
+      description: A created sample order
+      type: object
+      properties:
+        orderId:
+          type: string
+          description: Unique order identifier
+        productId:
+          type: string
+          description: Product ordered
+        status:
+          type: string
+          enum: [pending, processing, shipped, delivered]
+          description: Order status
+        createdAt:
+          type: string
+          format: date-time
+          description: Order creation timestamp

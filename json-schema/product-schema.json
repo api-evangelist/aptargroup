@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/aptargroup/main/json-schema/product-schema.json",
+  "title": "Product",
+  "description": "A dispensing, sealing, or packaging product from AptarGroup",
+  "type": "object",
+  "properties": {
+    "productId": {
+      "type": "string",
+      "description": "Unique product identifier"
+    },
+    "name": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category (dispensing, sealing, active-packaging)"
+    },
+    "market": {
+      "type": "string",
+      "description": "Target market (beauty, pharma, food, home-care, etc.)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "material": {
+      "type": "string",
+      "description": "Primary material (plastic, aluminum, glass, etc.)"
+    },
+    "sustainable": {
+      "type": "boolean",
+      "description": "Whether the product uses sustainable materials"
+    },
+    "sku": {
+      "type": "string",
+      "description": "Stock keeping unit identifier"
+    }
+  },
+  "required": [
+    "productId",
+    "name",
+    "category",
+    "market"
+  ]
+}

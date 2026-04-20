@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/aptargroup/main/json-structure/product-structure.json",
+  "title": "Product",
+  "description": "A dispensing or packaging product from AptarGroup",
+  "type": "record",
+  "fields": [
+    {
+      "name": "productId",
+      "type": "string",
+      "description": "Unique product identifier"
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "description": "Product name"
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "description": "Product category"
+    },
+    {
+      "name": "market",
+      "type": "string",
+      "description": "Target market"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "description": "Product description"
+    },
+    {
+      "name": "material",
+      "type": "string",
+      "description": "Primary material"
+    },
+    {
+      "name": "sustainable",
+      "type": "boolean",
+      "description": "Sustainable materials flag"
+    },
+    {
+      "name": "sku",
+      "type": "string",
+      "description": "SKU identifier"
+    }
+  ]
+}

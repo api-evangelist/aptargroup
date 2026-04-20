@@ -1,0 +1,115 @@
+vocabulary: "1.0.0"
+
+info:
+  provider: AptarGroup
+  description: >-
+    Vocabulary for AptarGroup dispensing, sealing, and active packaging solutions
+    serving the beauty, personal care, pharmaceutical, food, beverage, and home
+    care markets globally.
+  created: "2026-04-19"
+  modified: "2026-04-19"
+
+operational:
+  apis:
+    - name: AptarGroup API
+      namespace: aptar
+      version: "1.0.0"
+      baseUrl: "https://api.aptargroup.com/v1"
+      status: active
+
+  resources:
+    - name: products
+      description: Dispensing and packaging products in the AptarGroup catalog
+      api: AptarGroup API
+      actions:
+        - list
+        - get
+    - name: orders
+      description: Sample requests and product orders
+      api: AptarGroup API
+      actions:
+        - create
+        - get
+
+  actions:
+    - name: list
+      httpMethod: GET
+      pattern: read
+    - name: get
+      httpMethod: GET
+      pattern: read
+    - name: create
+      httpMethod: POST
+      pattern: write
+
+  schemas:
+    core:
+      - name: Product
+        description: An AptarGroup dispensing or packaging product with market and material data
+      - name: SampleRequest
+        description: A request for product samples for evaluation
+      - name: Order
+        description: A created sample order with status tracking
+
+  parameters:
+    identifiers:
+      - name: productId
+        description: Unique AptarGroup product identifier
+      - name: orderId
+        description: Unique order identifier
+    filters:
+      - name: category
+        description: Product category filter (dispensing, sealing, active-packaging)
+      - name: market
+        description: Target market filter (beauty, pharma, food, home-care)
+      - name: sustainable
+        description: Filter for sustainable products only
+
+  enums:
+    productCategories:
+      - dispensing
+      - sealing
+      - active-packaging
+    targetMarkets:
+      - beauty
+      - personal-care
+      - pharmaceutical
+      - food
+      - beverage
+      - home-care
+    materials:
+      - plastic
+      - recycled-plastic
+      - aluminum
+      - glass
+      - bio-based
+
+  authentication:
+    schemes:
+      - type: bearer
+        description: Bearer token authentication for API access
+
+capability:
+  workflows:
+    - name: Packaging Sourcing
+      description: Browse and sample sustainable packaging solutions from AptarGroup
+      resources:
+        - products
+        - orders
+  personas:
+    - name: Product Developer
+      description: Evaluates and sources packaging solutions for consumer products
+    - name: Procurement Manager
+      description: Manages packaging supplier relationships and sample requests
+  domains:
+    - name: Product Catalog
+      description: Browsing dispensing and packaging product options
+      resources:
+        - products
+    - name: Sample Management
+      description: Requesting and tracking product samples for evaluation
+      resources:
+        - orders
+
+  namespaces: []
+  binds: []
