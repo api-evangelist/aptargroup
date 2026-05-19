@@ -33,6 +33,8 @@ apis:
     type: Vocabulary
   description: API for the AptarGroup product catalog of dispensing, sealing, and active packaging solutions for beauty, pharmaceutical, food, and home care markets.
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/aptar
 - type: Website
   url: https://www.aptargroup.com
 description: >-
