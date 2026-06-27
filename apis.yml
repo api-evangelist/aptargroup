@@ -20,15 +20,15 @@ apis:
     - url: json-structure/product-structure.json
       type: JSONStructure
     - url: examples/product-example.json
-      type: Example
+      type: Examples
     - url: json-ld/aptargroup-context.jsonld
       type: JSONLD
     - url: rules/aptargroup-spectral-rules.yml
       type: SpectralRules
     - url: capabilities/shared/aptargroup-api.yaml
-      type: NaftikoCapability
+      type: X-NaftikoCapability
     - url: capabilities/packaging-sourcing.yaml
-      type: NaftikoCapability
+      type: X-NaftikoCapability
     - url: vocabulary/aptargroup-vocabulary.yaml
       type: Vocabulary
     description: API for the AptarGroup product catalog of dispensing, sealing, and active packaging solutions for beauty, pharmaceutical, food, and home care markets.
