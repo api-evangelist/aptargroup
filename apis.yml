@@ -33,6 +33,8 @@ apis:
       type: Vocabulary
     description: API for the AptarGroup product catalog of dispensing, sealing, and active packaging solutions for beauty, pharmaceutical, food, and home care markets.
 common:
+  - type: AgenticAccess
+    url: agentic-access/aptargroup-agentic-access.yml
   - type: DomainSecurity
     url: security/aptargroup-domain-security.yml
   - type: Authentication
