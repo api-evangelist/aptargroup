@@ -1,0 +1,16 @@
+{
+  "provider": "aptargroup",
+  "sources": [
+    "aptargroup-orders-api-openapi.yml",
+    "aptargroup-products-api-openapi.yml"
+  ],
+  "outputs": [
+    "aptargroup-orders-api-openapi.yml",
+    "aptargroup-products-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
