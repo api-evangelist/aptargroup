@@ -36,10 +36,6 @@ apis:
     url: json-ld/aptargroup-context.jsonld
   - type: SpectralRules
     url: rules/aptargroup-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/shared/aptargroup-api.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/packaging-sourcing.yaml
   - type: Vocabulary
     url: vocabulary/aptargroup-vocabulary.yaml
 - aid: aptargroup:aptargroup-products-api
@@ -63,10 +59,6 @@ apis:
     url: json-ld/aptargroup-context.jsonld
   - type: SpectralRules
     url: rules/aptargroup-spectral-rules.yml
-  - type: X-NaftikoCapability
-    url: capabilities/shared/aptargroup-api.yaml
-  - type: X-NaftikoCapability
-    url: capabilities/packaging-sourcing.yaml
   - type: Vocabulary
     url: vocabulary/aptargroup-vocabulary.yaml
 common:
