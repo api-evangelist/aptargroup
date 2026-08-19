@@ -1,0 +1,74 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "AptarGroup Product Catalog Orders Products API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "AptarGroup - List Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.aptargroup.com/v1/products",
+            "params": [
+              {
+                "name": "category",
+                "value": "",
+                "type": "query",
+                "description": "Filter by product category (dispensing, sealing, active-packaging)"
+              },
+              {
+                "name": "market",
+                "value": "",
+                "type": "query",
+                "description": "Filter by target market (beauty, pharma, food, home-care)"
+              },
+              {
+                "name": "sustainable",
+                "value": "",
+                "type": "query",
+                "description": "Filter to only sustainable products"
+              }
+            ]
+          },
+          "docs": "Returns a list of AptarGroup dispensing and packaging products"
+        },
+        {
+          "info": {
+            "name": "AptarGroup - Get Product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.aptargroup.com/v1/products/:productId",
+            "params": [
+              {
+                "name": "productId",
+                "value": "",
+                "type": "path",
+                "description": "Unique product identifier"
+              }
+            ]
+          },
+          "docs": "Returns details for a specific AptarGroup product"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
