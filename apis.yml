@@ -21,6 +21,8 @@ apis:
   description: Sample and order management
   humanURL: https://www.aptargroup.com
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -44,6 +46,8 @@ apis:
   description: AptarGroup product catalog
   humanURL: https://www.aptargroup.com
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
