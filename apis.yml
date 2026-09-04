@@ -26,12 +26,14 @@ accessModel:
   - security
   generated: '2026-09-03'
   method: derived
-modified: '2026-04-19'
+created: '2026-04-19'
+modified: '2026-09-04'
 apis:
 - aid: aptargroup:aptargroup-orders-api
   name: AptarGroup Orders API
   description: Sample and order management
-  humanURL: https://www.aptargroup.com
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aptargroup.png
+  humanURL: https://www.aptar.com
   tags:
   - Order
   tags_raw:
@@ -40,7 +42,7 @@ apis:
   - type: OpenAPI
     url: openapi/aptargroup-orders-api-openapi.yml
   - type: Website
-    url: https://www.aptargroup.com
+    url: https://www.aptar.com
   - type: JSONSchema
     url: json-schema/product-schema.json
   - type: JSONStructure
@@ -56,7 +58,8 @@ apis:
 - aid: aptargroup:aptargroup-products-api
   name: AptarGroup Products API
   description: AptarGroup product catalog
-  humanURL: https://www.aptargroup.com
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aptargroup.png
+  humanURL: https://www.aptar.com
   tags:
   - Product
   tags_raw:
@@ -65,7 +68,7 @@ apis:
   - type: OpenAPI
     url: openapi/aptargroup-products-api-openapi.yml
   - type: Website
-    url: https://www.aptargroup.com
+    url: https://www.aptar.com
   - type: JSONSchema
     url: json-schema/product-schema.json
   - type: JSONStructure
@@ -88,11 +91,27 @@ common:
   - type: LinkedIn
     url: https://www.linkedin.com/company/aptar
   - type: Website
-    url: https://www.aptargroup.com
+    url: https://www.aptar.com
+  - type: Packages
+    url: packages/aptargroup-packages.yml
+  - type: Plans
+    url: plans/aptargroup-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/aptargroup-rate-limits.yml
+  - type: Support
+    url: https://aptar.com/services/technical-support/
+  - type: TermsOfService
+    url: https://www.aptar.com/general-terms-and-conditions-of-use/
+  - type: PrivacyPolicy
+    url: https://www.aptar.com/general-terms-and-conditions-of-use/
+  - type: Blog
+    url: https://aptar.com/en-us/news-events
 description: >-
-  AptarGroup is a global supplier of consumer-product dispensing, sealing, and active
-  packaging solutions serving the beauty, personal care, home care, food, beverage,
-  pharmaceutical, and other markets.
+  AptarGroup is a global supplier of consumer-product dispensing, sealing, and active packaging
+  solutions serving the beauty, personal care, home care, food, beverage, pharmaceutical and other
+  markets. Its Aptar Pharma segment includes Aptar Digital Health, a software division building
+  companion apps, connected drug-delivery devices and disease-management platforms, but Aptar
+  publishes no public developer program, API reference or machine-readable contract for any of it.
 name: AptarGroup
 tags:
   - Packaging
@@ -104,3 +123,36 @@ tags:
 type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aptargroup.png
 access: 3rd-Party
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+- FN: APIs.json
+  email: info@apis.io
+x-enrichment:
+  date: '2026-09-04'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Aptar ships software only as an end-user product: its software-bearing division site
+    aptardigitalhealth.com is fully crawlable (robots.txt allows all) and carries careers, news,
+    contact, privacy and terms but no developer, API or documentation section anywhere, and neither
+    developer.aptar.com nor api.aptar.com resolves in DNS - the only "request access" surface Aptar
+    publishes is a regulatory document portal, not an API.
+  evidence:
+    - url: https://aptardigitalhealth.com/
+      status: 200
+    - url: https://aptardigitalhealth.com/robots.txt
+      status: 200
+    - url: https://www.aptar.com/.well-known/api-catalog
+      status: 404
+    - url: https://api.aptargroup.com/v1
+      status: 0
+    - url: https://api.github.com/orgs/aptar
+      status: 404
+    - url: https://pypi.org/pypi/aptar/json
+      status: 404
+  checked: '2026-09-04'

@@ -1,0 +1,53 @@
+specification: API Commons Packages
+specificationVersion: '0.1'
+provider: AptarGroup
+providerId: aptargroup
+generated: '2026-09-04'
+method: searched
+source: >-
+  Unauthenticated registry searches on 2026-09-04: registry.npmjs.org search for "aptar",
+  pypi.org/pypi/aptar/json (404), and the GitHub repository search API for "aptar in:name"
+  (107 results, none owned by AptarGroup). GitHub organisation lookups for github.com/aptar,
+  github.com/aptargroup and github.com/aptardigitalhealth all returned 404.
+package_count: 0
+official_package_count: 0
+result: >-
+  AptarGroup publishes no first-party client library on any package registry. The three npm hits for
+  "aptar" (aptar-tiles, aptar-tile-container, aptar-tile-link) are unrelated third-party Angular UI
+  components, not AptarGroup software. The GitHub hits are personal repositories — the closest,
+  VincentBeilke/AptarPOApproval, is an individual's purchase-order project, not a company release.
+  There is no AptarGroup GitHub organisation to hold an SDK.
+notes: >-
+  No SDKs pointer is emitted. Recording package_count: 0 is a measured absence, not an unchecked
+  field: each registry above was queried and answered.
+packages: []
+candidates_rejected:
+- name: aptar-tiles
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: >-
+    Third-party Angular tile component ("This is Aptar tiles component"), unrelated to AptarGroup
+    the packaging manufacturer. Name collision only.
+- name: aptar-tile-container
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: Sibling of aptar-tiles; same third-party Angular component family, not AptarGroup.
+- name: aptar-tile-link
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: Sibling of aptar-tiles; same third-party Angular component family, not AptarGroup.
+- name: VincentBeilke/AptarPOApproval
+  registry: github
+  version: null
+  published: null
+  official: false
+  reason: >-
+    Personal GitHub repository described as "Aptar Purchas Order Approval API". Owned by an
+    individual account, not by AptarGroup; no release, no registry publication, no company
+    attribution. Not a first-party SDK.

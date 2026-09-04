@@ -4,10 +4,14 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: AptarGroup
 providerId: aptargroup
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
+modified: '2026-09-04'
+generated: '2026-09-04'
+method: searched
+source: >-
+  Searched for published AptarGroup rate limits, throttling thresholds and rate-limit response
+  headers on 2026-09-04. No developer documentation of any kind exists to carry them: there is no
+  AptarGroup developer portal, no API reference, and no API host (api.aptargroup.com and
+  api.aptar.com are both NXDOMAIN).
 reconciled: false
 tags:
 - Packaging
@@ -18,26 +22,20 @@ tags:
 - Rate Limiting
 - Quotas
 - Throttling
-description: AptarGroup does not publish concrete rate-limit numbers, throttling thresholds, or response-header
-  conventions. This artifact records the gap; see notes for research findings.
-notes: No public rate-limit documentation for AptarGroup integrations. Throughput is governed by partner
-  agreements.
+limit_count: 0
+description: >-
+  AptarGroup publishes no rate limits, because it publishes no API. This artifact records a measured
+  absence.
+notes: >-
+  Rewritten 2026-09-04. The prior version of this file was written by the 2026-05-04 bulk sweep and
+  asserted a 429 throttled response code, a Retry-After/exponential-backoff policy and
+  "contract-scoped limits". None of that is published or observable anywhere — there is no live
+  endpoint to return a 429 — so it has been removed rather than left to read as provider-published
+  runtime semantics. limit_count: 0 is the honest measurement.
 sources:
-- https://www.aptargroup.com
-responseCodes:
-  throttled: 429
-limits:
-- name: Per-contract limits
-  scope: account
-  metric: varies
-  limit: see provider integration agreement
-  notes: No public rate-limit numbers; throughput is governed by individual customer or partner contracts.
-policies:
-- name: Backoff Strategy
-  description: Clients should implement exponential backoff with jitter and honor any Retry-After header
-    that may be returned, even though the provider does not publish formal retry semantics.
-- name: Contract-Scoped Limits
-  description: Quotas, burst, and concurrency ceilings are governed by the individual customer or partner
-    contract rather than a public policy. Coordinate with the provider to confirm thresholds before scaling
-    traffic.
+- https://www.aptar.com
+- https://aptardigitalhealth.com
+responseCodes: {}
+limits: []
+policies: []
 maintainers: []

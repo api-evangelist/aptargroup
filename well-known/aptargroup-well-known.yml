@@ -1,0 +1,127 @@
+specification: API Evangelist Well-Known Probe
+specificationVersion: '0.1'
+provider: AptarGroup
+providerId: aptargroup
+generated: '2026-09-04'
+method: probed
+source: >-
+  Live unauthenticated HTTPS probes (browser User-Agent, redirects followed) of every host this
+  record knows: the corporate site aptar.com/www.aptar.com, the Aptar Digital Health division site
+  aptardigitalhealth.com, and the two hosts named by the repo's existing OpenAPI
+  (www.aptargroup.com, api.aptargroup.com).
+result: >-
+  No well-known document is served on any AptarGroup host. www.aptargroup.com and api.aptargroup.com
+  do not resolve (NXDOMAIN). aptar.com and www.aptar.com sit behind an Imperva/Incapsula bot wall
+  that answers EVERY path — including /robots.txt — with a ~960-byte HTML interstitial and HTTP 200;
+  those 200s are challenge shells, not documents, and are recorded as misses. aptardigitalhealth.com
+  is fully readable (robots.txt allows all) and returns a real WordPress 404 for every probed path.
+  No WellKnown or SecurityTxt pointer is emitted, because nothing was served.
+notes: >-
+  A 200 on aptar.com is not evidence of a document. Read the body: the Imperva shell is identifiable
+  by <html style="height:100%"> plus a /_Incapsula_Resource iframe. Re-probe if Aptar ever relaxes
+  the edge policy for non-browser clients.
+hosts:
+- host: aptar.com
+  note: Corporate site. Every path answers HTTP 200 with an Imperva/Incapsula challenge shell.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: Imperva challenge shell (960 bytes of HTML), not a security.txt. Treated as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: Imperva challenge shell, not JSON. Treated as a miss.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: Imperva challenge shell, not JSON. Treated as a miss.
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: Imperva challenge shell, not JSON. Treated as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: Imperva challenge shell, not an AgentCard JSON object. Treated as a miss.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: Imperva challenge shell, not an AgentCard JSON object. Treated as a miss.
+- host: www.aptar.com
+  note: Canonical corporate host. Same Imperva/Incapsula edge policy as the apex.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: null
+    note: Imperva challenge shell. Treated as a miss.
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: null
+    note: Imperva challenge shell. Treated as a miss.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: null
+    note: Imperva challenge shell. Treated as a miss.
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    file: null
+    note: Imperva challenge shell. Treated as a miss.
+  - path: /.well-known/agent-card.json
+    status: 200
+    file: null
+    note: Imperva challenge shell. Treated as a miss.
+  - path: /.well-known/agent.json
+    status: 200
+    file: null
+    note: Imperva challenge shell. Treated as a miss.
+- host: aptardigitalhealth.com
+  note: >-
+    Aptar Digital Health (a division of Aptar Pharma). Fully readable WordPress site, robots.txt
+    allows all crawlers; every well-known path returns a genuine themed 404 page.
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null
+- host: www.aptargroup.com
+  note: >-
+    NXDOMAIN. This host is named as humanURL and Website across this repo's prior rounds and does
+    not exist; the live corporate host is www.aptar.com.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: DNS NXDOMAIN — no connection possible.
+- host: api.aptargroup.com
+  note: >-
+    NXDOMAIN. This is the servers[] host declared by this repo's OpenAPI documents. It has never
+    resolved; see the openapi provenance note.
+  documents:
+  - path: /.well-known/security.txt
+    status: 0
+    file: null
+    note: DNS NXDOMAIN — no connection possible.

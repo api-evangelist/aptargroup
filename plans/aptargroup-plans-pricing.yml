@@ -4,10 +4,16 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: AptarGroup
 providerId: aptargroup
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-05'
+modified: '2026-09-04'
+generated: '2026-09-04'
+method: searched
+source: >-
+  Searched for an AptarGroup API pricing, plans or developer-access page on 2026-09-04. There is no
+  developer program to price: no developer.aptar.com or api.aptar.com host exists (both NXDOMAIN),
+  aptardigitalhealth.com (fully readable, robots.txt allows all) carries no developer or API
+  section, and web search across aptar.com surfaces no API pricing page. Aptar's only "request
+  access" surface is https://aptar.com/en-us/request-access-to-the-regulatory-portal — a document
+  portal for regulatory paperwork, not an API plan.
 reconciled: false
 tags:
 - Packaging
@@ -15,30 +21,19 @@ tags:
 - Manufacturing
 - Sustainability
 - Consumer Goods
-description: AptarGroup does not publish a public API plans / pricing page. This artifact records the
-  absence of a self-serve commercial surface; see notes for research findings.
-notes: AptarGroup is a packaging manufacturer; it does not operate a public developer API program with
-  published plans or pricing. Catalog and product-data integrations are partner-only.
+plan_count: 0
+description: >-
+  AptarGroup publishes no API plans or pricing, because it publishes no API. This artifact records a
+  measured absence.
+notes: >-
+  Rewritten 2026-09-04. The prior version of this file was written by the 2026-05-04 bulk sweep and
+  asserted a "Contact Sales" enterprise plan with an api_access entry. Nothing on any AptarGroup
+  surface offers API access for sale, so that entry described a commercial motion the company does
+  not run; it has been removed rather than left to score as a published plan. plan_count: 0 is the
+  honest measurement.
 sources:
-- https://www.aptargroup.com
-plans:
-- id: aptargroup-contact-sales
-  name: Contact Sales
-  type: enterprise
-  description: No published self-serve plan. Commercial access is arranged directly with the provider;
-    quotas and pricing are governed by individual customer agreements.
-  entries:
-  - label: API Access
-    name: api_access
-    type: flat
-    metric: varies
-    limit: -1
-    timeFrame: usage
-    geo: global
-    unit: 1
-    price: contact sales
-    userMultiplied: false
-  elements:
-  - name: Negotiated Commercial Terms
-  - name: Partner Onboarding
+- https://www.aptar.com
+- https://aptardigitalhealth.com
+- https://aptar.com/en-us/request-access-to-the-regulatory-portal
+plans: []
 maintainers: []
