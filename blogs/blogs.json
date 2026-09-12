@@ -1,0 +1,14 @@
+{
+  "repo": "aptargroup",
+  "feeds": [
+    {
+      "source": "https://www.aptar.com/general-terms-and-conditions-of-use/",
+      "feed_url": "https://www.aptar.com/general-terms-and-conditions-of-use/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-09-06T19:17:18Z"
+}
