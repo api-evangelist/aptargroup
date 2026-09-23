@@ -1,7 +1,9 @@
 ---
 title: Aptar Digital Health Announces Licensing Agreement With ...
 url: https://www.businesswire.com/news/home/20250522139620/en/Aptar-Digital-Health-Announces-Licensing-Agreement-With-AstraZeneca-to-Develop-AI-Powered-Screening-Algorithms
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AptarGroup" press release artificial intelligence'
 position: 2
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: 'Earnings call transcript: AptarGroup beats Q3 2025 EPS ...'
 url: https://www.investing.com/news/transcripts/earnings-call-transcript-aptargroup-beats-q3-2025-eps-forecast-stock-drops-93CH-4324388
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"AptarGroup" press release artificial intelligence'
 position: 5
 source: serpapi-google

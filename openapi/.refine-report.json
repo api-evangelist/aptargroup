@@ -1,8 +1,7 @@
 {
   "provider": "aptargroup",
   "sources": [
-    "aptargroup-orders-api-openapi.yml",
-    "aptargroup-products-api-openapi.yml"
+    "_original/aptargroup-openapi.yaml"
   ],
   "outputs": [
     "aptargroup-orders-api-openapi.yml",
@@ -12,9 +11,12 @@
   "errors": [],
   "warnings": [],
   "notes": [
-    "aptargroup-orders-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
-    "aptargroup-products-api-openapi.yml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "aptargroup-openapi.yaml: upgraded openapi 3.0.3 -> OpenAPI 3.2.0",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "aptargroup-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "aptargroup-products-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
