@@ -82,6 +82,8 @@ apis:
   - type: Vocabulary
     url: vocabulary/aptargroup-vocabulary.yaml
 common:
+  - type: FinOps
+    url: finops/aptargroup-finops.yml
   - type: AgenticAccess
     url: agentic-access/aptargroup-agentic-access.yml
   - type: DomainSecurity
