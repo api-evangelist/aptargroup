@@ -1,4 +1,4 @@
-# AptarGroup (aptargroup)
+# AptarGroup
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,57 +64,157 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AptarGroup is a global supplier of consumer-product dispensing, sealing, and active packaging solutions serving the beauty, personal care, home care, food, beverage, pharmaceutical, and other markets. They design and manufacture innovative packaging that protects products and improves consumer experience, with a strong focus on sustainable packaging solutions.
+AptarGroup is a global supplier of consumer-product dispensing, sealing, and active packaging solutions serving the beauty, personal care, home care, food, beverage, pharmaceutical and other markets. Its Aptar Pharma segment includes Aptar Digital Health, a software division building companion apps, connected drug-delivery devices and disease-management platforms, but Aptar publishes no public developer program, API reference or machine-readable contract for any of it.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/aptargroup/refs/heads/main/apis.yml)
+**Areas:** Packaging · Dispensing · Manufacturing · Sustainability · Consumer Goods · Fortune 1000
 
-## Scope of Coverage
+## AptarGroup on APIs.io
 
-| Item | Count |
-|------|-------|
-| APIs | 1 |
-| OpenAPI Specs | 1 |
-| JSON Schemas | 1 |
-| JSON Structures | 1 |
-| Examples | 1 |
-| JSON-LD Contexts | 1 |
-| Spectral Rulesets | 1 |
-| Naftiko Capabilities | 2 |
-| Vocabularies | 1 |
+Everything profiled for AptarGroup is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aptargroup/](https://apis.io/providers/aptargroup/)** — or go straight to one of the APIs or properties below.
 
-## APIs Covered
+### APIs (2)
 
-- **AptarGroup API** — Product catalog and sample request API for dispensing, sealing, and active packaging solutions.
+- [AptarGroup Orders API](https://apis.io/apis/aptargroup/aptargroup-orders-api/) — Sample and order management
+- [AptarGroup Products API](https://apis.io/apis/aptargroup/aptargroup-products-api/) — AptarGroup product catalog
 
-## Artifacts
+### Published properties
 
-### OpenAPI Specifications
-- [openapi/aptargroup-openapi.yaml](openapi/aptargroup-openapi.yaml)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### JSON Schemas
-- [json-schema/product-schema.json](json-schema/product-schema.json)
+#### Agentic access (1)
 
-### JSON Structures
-- [json-structure/product-structure.json](json-structure/product-structure.json)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-### Examples
-- [examples/product-example.json](examples/product-example.json)
+- [Aptargroup Agentic Access](https://apis.io/agentic-access/aptargroup/aptargroup-agentic-access/)
 
-### JSON-LD
-- [json-ld/aptargroup-context.jsonld](json-ld/aptargroup-context.jsonld)
+#### JSON Schema (1)
 
-### Spectral Rules
-- [rules/aptargroup-spectral-rules.yml](rules/aptargroup-spectral-rules.yml)
+The data models the API reads and writes.
 
-### Naftiko Capabilities
-- [capabilities/shared/aptargroup-api.yaml](capabilities/shared/aptargroup-api.yaml)
-- [capabilities/packaging-sourcing.yaml](capabilities/packaging-sourcing.yaml)
+- [Product](https://apis.io/schemas/aptargroup/product/)
 
-### Vocabulary
-- [vocabulary/aptargroup-vocabulary.yaml](vocabulary/aptargroup-vocabulary.yaml)
+#### JSON Structure (1)
 
-## Maintainers
+Data models expressed in JSON Structure.
 
-**FN:** API Evangelist
+- [Product Structure](https://apis.io/json-structure/aptargroup/product-structure/)
 
-**Email:** info@apievangelist.com
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Aptargroup Context](https://apis.io/jsonld/aptargroup/aptargroup-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Aptargroup Vocabulary](https://apis.io/vocabularies/aptargroup/aptargroup-vocabulary/)
+
+#### Examples (1)
+
+Example requests and responses.
+
+- [Product Example](https://apis.io/examples/aptargroup/product-example/)
+
+#### Collections (2)
+
+Postman and Open Collection request collections.
+
+- [AptarGroup Product Catalog Orders API](https://apis.io/collections/aptargroup/open-aptargroup-orders-api/)
+- [AptarGroup Product Catalog Orders Products API](https://apis.io/collections/aptargroup/open-aptargroup-products-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [AptarGroup — jsonschema rules](https://apis.io/rules/aptargroup/aptargroup-jsonschema-spectral-rules/)
+- [AptarGroup API Rules](https://apis.io/rules/aptargroup/aptargroup-spectral-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aptargroup Authentication](https://apis.io/security/aptargroup/aptargroup-authentication/)
+- [Aptargroup Domain Security](https://apis.io/security/aptargroup/aptargroup-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aptargroup Plans Pricing](https://apis.io/plans/aptargroup/aptargroup-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aptargroup Rate Limits](https://apis.io/rate-limits/aptargroup/aptargroup-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Aptargroup Finops](https://apis.io/finops/aptargroup/aptargroup-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.aptar.com)
+- [Support](https://aptar.com/services/technical-support/)
+- [Blog](https://aptar.com/en-us/news-events)
+- [Terms of service](https://www.aptar.com/general-terms-and-conditions-of-use/)
+- [Privacy policy](https://www.aptar.com/general-terms-and-conditions-of-use/)
+
+## API Evangelist rating
+
+**Kin Score 22.7** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 25.6 |
+| Contract governance | 27.3 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 21.1 |
+
+**Agent readiness 24.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 24.5** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aptargroup/](https://apis.io/providers/aptargroup/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AptarGroup: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aptargroup/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
