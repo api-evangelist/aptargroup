@@ -8,6 +8,12 @@ artifacts:
   authentication/aptargroup-authentication.yml:
     method: derived
     evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/aptargroup-orders-api.opencollection.json:
     method: derived
     evidence: openapi/aptargroup-orders-api
@@ -20,6 +26,12 @@ artifacts:
   collections/aptargroup-products-api.postman_collection.json:
     method: derived
     evidence: openapi/aptargroup-products-api
+  data-license/aptargroup-data-license.yml:
+    method: harvested
+    evidence: declared in the artifact
+  eligibility/aptargroup-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
   examples/product-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -32,6 +44,12 @@ artifacts:
   json-ld/aptargroup-context.jsonld:
     method: unknown
     evidence: no authorship recorded
+  json-schema/aptargroup-order-schema.json:
+    method: unknown
+    evidence: no authorship recorded
+  json-schema/aptargroup-sample-request-schema.json:
+    method: unknown
+    evidence: no authorship recorded
   json-schema/product-schema.json:
     method: unknown
     evidence: no authorship recorded
@@ -41,7 +59,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -110,6 +128,9 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/aptargroup-openapi.yaml:
     method: generated
     evidence: declared in the artifact
@@ -140,6 +161,9 @@ artifacts:
   press/2026-05-25-05-earnings-call-transcript-aptargroup-beats-q3-2025-eps.md:
     method: unknown
     evidence: no authorship recorded
+  privacy/aptargroup-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/aptargroup-rate-limits.yml:
     method: searched
     evidence: declared in the artifact
@@ -167,6 +191,9 @@ artifacts:
   security/aptargroup-domain-security.yml:
     method: unknown
     evidence: no authorship recorded
+  terms/aptargroup-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
   vocabulary/aptargroup-vocabulary.yaml:
     method: unknown
     evidence: no authorship recorded
